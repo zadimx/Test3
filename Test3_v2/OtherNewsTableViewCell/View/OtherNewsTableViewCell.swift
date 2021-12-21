@@ -9,37 +9,30 @@ import Foundation
 import UIKit
 
 class OtherNewsTableViewCell: UITableViewCell {
-  @IBOutlet weak var otherNewsDateLabel: UILabel!
-  @IBOutlet weak var otherNewsHistoryLabel: UILabel!
-  @IBOutlet weak var otherNewsTopicTextView: UITextView!
-  @IBOutlet weak var otherNewsImageNews: UIImageView!
-  
-  override func awakeFromNib() {
-    super.awakeFromNib()
-    initialImageView(imageView: otherNewsImageNews)
-  }
-  
-  override func setSelected(_ selected: Bool, animated: Bool) {
-    super.setSelected(selected, animated: animated)
-  }
-  
-  func setData(object: Articles) {
-    self.otherNewsDateLabel.text = HardCode().dateFormartOtherNews(dateString: object.publishedAt)
-    if (object.urlToImage?.isEmpty == true || object.urlToImage == nil) {
-      self.otherNewsImageNews.image = UIImage(named: HardCode.imageString)
-    } else {
-      let url = URL(string: object.urlToImage!)
-      if let dataImage = try? Data(contentsOf: url!) {
-        self.otherNewsImageNews.image = UIImage(data: dataImage)
-      }
+    @IBOutlet weak var otherNewsDateLabel: UILabel!
+    @IBOutlet weak var otherNewsHistoryLabel: UILabel!
+    @IBOutlet weak var otherNewsTopicTextView: UITextView!
+    @IBOutlet weak var otherNewsImageNews: UIImageView!
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        initialImageView(imageView: otherNewsImageNews)
     }
-    self.otherNewsHistoryLabel.text = object.source?.name
-    self.otherNewsTopicTextView.text = object.title
-  }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+
+    func setData(object: Article) {
+        self.otherNewsDateLabel.text = HardCode().dateFormatOtherNews(dateString: object.publishedAt)
+        HardCode().setupUrlImage(data: object, imageView: otherNewsImageNews)
+        self.otherNewsHistoryLabel.text = object.source?.name
+        self.otherNewsTopicTextView.text = object.title
+    }
 }
 
 extension OtherNewsTableViewCell {
-  func initialImageView(imageView: UIImageView) {
-    imageView.layer.cornerRadius = 20
-  }
+    func initialImageView(imageView: UIImageView) {
+        imageView.layer.cornerRadius = 20
+    }
 }

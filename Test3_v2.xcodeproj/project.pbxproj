@@ -12,7 +12,7 @@
 		1D30BFC8273C0CA4005F7752 /* OtherNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D30BFC7273C0CA4005F7752 /* OtherNewsTableViewCell.swift */; };
 		1D3702072742D1310029FEFB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3702062742D1310029FEFB /* Model.swift */; };
 		1D37020C2742D2850029FEFB /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D37020B2742D2850029FEFB /* NetworkService.swift */; };
-		1D3702332743C5F40029FEFB /* MainNewsCollerctionViewTableViewCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3702322743C5F40029FEFB /* MainNewsCollerctionViewTableViewCellPresenter.swift */; };
+		1D3702332743C5F40029FEFB /* MainNewsCollectionViewTableViewCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3702322743C5F40029FEFB /* MainNewsCollectionViewTableViewCellPresenter.swift */; };
 		1D3702462743CB280029FEFB /* MainNewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3702442743CB280029FEFB /* MainNewsCollectionViewCell.swift */; };
 		1D3702472743CB280029FEFB /* MainNewsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D3702452743CB280029FEFB /* MainNewsCollectionViewCell.xib */; };
 		1D370288274512850029FEFB /* MainNewsCollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D370286274512850029FEFB /* MainNewsCollectionViewTableViewCell.swift */; };
@@ -56,7 +56,7 @@
 		1D30BFC7273C0CA4005F7752 /* OtherNewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherNewsTableViewCell.swift; sourceTree = "<group>"; };
 		1D3702062742D1310029FEFB /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		1D37020B2742D2850029FEFB /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		1D3702322743C5F40029FEFB /* MainNewsCollerctionViewTableViewCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNewsCollerctionViewTableViewCellPresenter.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		1D3702322743C5F40029FEFB /* MainNewsCollectionViewTableViewCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNewsCollectionViewTableViewCellPresenter.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1D3702442743CB280029FEFB /* MainNewsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		1D3702452743CB280029FEFB /* MainNewsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainNewsCollectionViewCell.xib; sourceTree = "<group>"; };
 		1D370286274512850029FEFB /* MainNewsCollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainNewsCollectionViewTableViewCell.swift; path = Test3_v2/MainTableViewCell/View/MainNewsCollectionViewTableViewCell.swift; sourceTree = SOURCE_ROOT; };
@@ -154,7 +154,7 @@
 		1D37024F2743E4770029FEFB /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				1D3702322743C5F40029FEFB /* MainNewsCollerctionViewTableViewCellPresenter.swift */,
+				1D3702322743C5F40029FEFB /* MainNewsCollectionViewTableViewCellPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -436,7 +436,7 @@
 				1D3702A0274548AA0029FEFB /* DetailNewsPresenter.swift in Sources */,
 				1DBA6465273D6F130028CB3F /* OtherNewsTableViewPresenter.swift in Sources */,
 				1D3702462743CB280029FEFB /* MainNewsCollectionViewCell.swift in Sources */,
-				1D3702332743C5F40029FEFB /* MainNewsCollerctionViewTableViewCellPresenter.swift in Sources */,
+				1D3702332743C5F40029FEFB /* MainNewsCollectionViewTableViewCellPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

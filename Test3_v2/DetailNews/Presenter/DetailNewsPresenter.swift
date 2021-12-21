@@ -9,26 +9,26 @@ import Foundation
 import UIKit
 
 protocol DetailNewsProtocol: class {
-  func setData(dataArticles: Articles)
+    func setupData(data: Article)
 }
 
 protocol DetailNewsPresenterProtocol: class {
-  init(view: DetailNewsProtocol, router: RouterProtocol, data: Articles)
-  func setData()
+    init(view: DetailNewsProtocol, router: RouterProtocol, data: Article)
+    func setupData()
 }
 
 class DetailNewsPresenter: DetailNewsPresenterProtocol {
-  weak var view: DetailNewsProtocol?
-  var router: RouterProtocol?
-  let data: Articles
-  
-  required init(view: DetailNewsProtocol ,router: RouterProtocol, data: Articles) {
-    self.view = view
-    self.router = router
-    self.data = data
-  }
-  
-  func setData() {
-    self.view?.setData(dataArticles: data)
-  }
+    weak var view: DetailNewsProtocol?
+    var router: RouterProtocol?
+    let data: Article
+
+    required init(view: DetailNewsProtocol, router: RouterProtocol, data: Article) {
+        self.view = view
+        self.router = router
+        self.data = data
+    }
+
+    func setupData() {
+        self.view?.setupData(data: data)
+    }
 }

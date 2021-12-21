@@ -1,19 +1,19 @@
 import Foundation
 
-struct Root:Decodable {
-  var articles: [Articles]
+struct Root: Decodable {
+    var articles: [Article]
 }
 
-struct Articles:Decodable {
-  var source: Source?
-  var title: String?
-  var content: String?
-  var urlToImage: String?
-  var url: String?
-  var publishedAt: String?
+struct Article: Decodable {
+    var source: Source?
+    var title: String?
+    var content: String?
+    var urlToImage: String?
+    var url: String?
+    var publishedAt: String?
 }
 
-struct Source:Decodable {
-  var name: String?
+struct Source: Decodable {
+    var name: String?
 }
 

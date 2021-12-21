@@ -8,41 +8,34 @@
 import UIKit
 
 class DetailNewsViewController: UIViewController {
-  var detailNewsPresenter: DetailNewsPresenterProtocol!
-  @IBOutlet weak var newsDetailsDateLabel: UILabel!
-  @IBOutlet weak var newsDetailsHistoryLabel: UILabel!
-  @IBOutlet weak var newsDetailsTopicTextView: UITextView!
-  @IBOutlet weak var newsDetailsDesriptionTextView: UITextView!
-  @IBOutlet weak var newsDetailsImageView: UIImageView!
-  @IBOutlet weak var viewContent: UIView!
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    detailNewsPresenter.setData()
-    initialImageView(imageView: newsDetailsImageView, view: viewContent)
-  }
-}
+    var detailNewsPresenter: DetailNewsPresenterProtocol!
+    @IBOutlet weak var newsDetailsDateLabel: UILabel!
+    @IBOutlet weak var newsDetailsHistoryLabel: UILabel!
+    @IBOutlet weak var newsDetailsTopicTextView: UITextView!
+    @IBOutlet weak var newsDetailsDescriptionTextView: UITextView!
+    @IBOutlet weak var newsDetailsImageView: UIImageView!
+    @IBOutlet weak var viewContent: UIView!
 
-extension DetailNewsViewController: DetailNewsProtocol{
-  func setData(dataArticles: Articles) {
-    if (dataArticles.urlToImage?.isEmpty == true || dataArticles.urlToImage == nil) {
-      newsDetailsImageView.image = UIImage(named: HardCode.imageString)
-    } else{
-      let url = URL(string: dataArticles.urlToImage!)
-      if let dataImage = try? Data(contentsOf: url!){
-        newsDetailsImageView.image = UIImage(data: dataImage)
-      }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        detailNewsPresenter.setupData()
+        initialImageView(imageView: newsDetailsImageView, view: viewContent)
     }
-    newsDetailsDateLabel.text = HardCode().dateFormart(dateString: dataArticles.publishedAt)
-    newsDetailsHistoryLabel.text = dataArticles.source?.name
-    newsDetailsTopicTextView.text = dataArticles.title
-    newsDetailsDesriptionTextView.text = dataArticles.content
-  }
 }
 
-extension DetailNewsViewController{
-  func initialImageView(imageView: UIImageView, view: UIView){
-    imageView.layer.cornerRadius = 20
-    view.layer.cornerRadius = 20
-  }
+extension DetailNewsViewController: DetailNewsProtocol {
+    func setupData(data: Article) {
+        HardCode().setupUrlImage(data: data, imageView: newsDetailsImageView)
+        newsDetailsDateLabel.text = HardCode().dateFormat(dateString: data.publishedAt)
+        newsDetailsHistoryLabel.text = data.source?.name
+        newsDetailsTopicTextView.text = data.title
+        newsDetailsDescriptionTextView.text = data.content
+    }
+}
+
+extension DetailNewsViewController {
+    func initialImageView(imageView: UIImageView, view: UIView) {
+        imageView.layer.cornerRadius = 20
+        view.layer.cornerRadius = 20
+    }
 }
