@@ -8,28 +8,28 @@
 import UIKit
 
 class DetailNewsViewController: UIViewController {
-    var detailNewsPresenter: DetailNewsPresenterProtocol!
-    @IBOutlet weak var newsDetailsDateLabel: UILabel!
-    @IBOutlet weak var newsDetailsHistoryLabel: UILabel!
-    @IBOutlet weak var newsDetailsTopicTextView: UITextView!
-    @IBOutlet weak var newsDetailsDescriptionTextView: UITextView!
-    @IBOutlet weak var newsDetailsImageView: UIImageView!
-    @IBOutlet weak var viewContent: UIView!
+    var presenter: DetailNewsPresenterProtocol!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var historyLabel: UILabel!
+    @IBOutlet weak var topicTextView: UITextView!
+    @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var contentView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        detailNewsPresenter.setupData()
-        initialImageView(imageView: newsDetailsImageView, view: viewContent)
+        presenter.setupData()
+        initialImageView(imageView: imageView, view: contentView)
     }
 }
 
 extension DetailNewsViewController: DetailNewsProtocol {
     func setupData(data: Article) {
-        HardCode().setupUrlImage(data: data, imageView: newsDetailsImageView)
-        newsDetailsDateLabel.text = HardCode().dateFormat(dateString: data.publishedAt)
-        newsDetailsHistoryLabel.text = data.source?.name
-        newsDetailsTopicTextView.text = data.title
-        newsDetailsDescriptionTextView.text = data.content
+        HardCode().setupUrlImage(data: data, imageView: imageView)
+        dateLabel.text = HardCode().dateFormat(dateString: data.publishedAt)
+        historyLabel.text = data.source?.name
+        topicTextView.text = data.title
+        descriptionTextView.text = data.content
     }
 }
 

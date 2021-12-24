@@ -19,7 +19,7 @@ protocol DetailNewsPresenterProtocol: class {
 
 class DetailNewsPresenter: DetailNewsPresenterProtocol {
     weak var view: DetailNewsProtocol?
-    var router: RouterProtocol?
+    var router: RouterProtocol
     let data: Article
 
     required init(view: DetailNewsProtocol, router: RouterProtocol, data: Article) {

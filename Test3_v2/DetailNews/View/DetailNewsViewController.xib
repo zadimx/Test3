@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -9,13 +10,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailNewsViewController" customModule="Test3_v2" customModuleProvider="target">
             <connections>
-                <outlet property="newsDetailsDateLabel" destination="1gx-WM-kVr" id="pud-JU-brn"/>
-                <outlet property="newsDetailsDescriptionTextView" destination="AjB-aZ-VTO" id="bVP-0Z-9FV"/>
-                <outlet property="newsDetailsHistoryLabel" destination="nsi-b2-Ogd" id="ELc-on-Yhr"/>
-                <outlet property="newsDetailsImageView" destination="x7u-Jg-EPd" id="ucu-B7-nVr"/>
-                <outlet property="newsDetailsTopicTextView" destination="OuK-I2-NEn" id="pms-Mh-FdM"/>
+                <outlet property="contentView" destination="pgZ-7l-8rU" id="N4o-hW-zbR"/>
+                <outlet property="dateLabel" destination="1gx-WM-kVr" id="fRF-67-WHU"/>
+                <outlet property="descriptionTextView" destination="AjB-aZ-VTO" id="ddV-PD-4Qj"/>
+                <outlet property="historyLabel" destination="nsi-b2-Ogd" id="A0S-gO-Wxh"/>
+                <outlet property="imageView" destination="x7u-Jg-EPd" id="vKV-8Z-zY5"/>
+                <outlet property="topicTextView" destination="OuK-I2-NEn" id="O9v-Vc-3jn"/>
                 <outlet property="view" destination="p4P-tb-V7B" id="DrG-Ao-qjf"/>
-                <outlet property="viewContent" destination="pgZ-7l-8rU" id="vXy-aR-OIh"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -24,10 +25,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x7u-Jg-EPd">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="696"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="618"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pgZ-7l-8rU">
-                    <rect key="frame" x="0.0" y="246" width="414" height="650"/>
+                    <rect key="frame" x="0.0" y="290" width="414" height="572"/>
                     <subviews>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuK-I2-NEn">
                             <rect key="frame" x="16" y="16" width="382" height="128"/>

@@ -9,7 +9,6 @@ struct Article: Decodable {
     var title: String?
     var content: String?
     var urlToImage: String?
-    var url: String?
     var publishedAt: String?
 }
 

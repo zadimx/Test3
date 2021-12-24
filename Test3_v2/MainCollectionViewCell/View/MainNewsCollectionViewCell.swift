@@ -8,7 +8,6 @@
 import UIKit
 
 class MainNewsCollectionViewCell: UICollectionViewCell {
-
     @IBOutlet var mainNewsDateLabel: UILabel!
     @IBOutlet var mainNewsHistoryLabel: UILabel!
     @IBOutlet var mainNewsTopicTextView: UITextView!

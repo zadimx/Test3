@@ -18,7 +18,7 @@ class AssemblyModelBuilder: AssemblyNewsBuilderProtocol {
     func createDetailNewsModuleViewController(data: Article, router: RouterProtocol) -> UIViewController {
         let view = DetailNewsViewController()
         let detailNewsPresenter = DetailNewsPresenter(view: view, router: router, data: data)
-        view.detailNewsPresenter = detailNewsPresenter
+        view.presenter = detailNewsPresenter
         return view
     }
 
