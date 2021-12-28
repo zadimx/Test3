@@ -9,18 +9,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell autoresizesSubviews="NO" contentMode="scaleAspectFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="180" id="KGk-i7-Jjw" customClass="OtherNewsTableViewCell" customModule="Test3_v2" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="605" height="139"/>
+        <tableViewCell autoresizesSubviews="NO" contentMode="scaleAspectFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="250" id="KGk-i7-Jjw" customClass="OtherNewsTableViewCell" customModule="Test3_v2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="656" height="209"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="605" height="139"/>
+                <rect key="frame" x="0.0" y="0.0" width="656" height="209"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LNZ-jg-g4D">
-                        <rect key="frame" x="16" y="16" width="110.5" height="107"/>
+                        <rect key="frame" x="16" y="16" width="166.5" height="177"/>
                     </imageView>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bz6-Eg-KPG">
-                        <rect key="frame" x="134.5" y="16" width="454.5" height="107"/>
+                    <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bz6-Eg-KPG">
+                        <rect key="frame" x="190.5" y="16" width="449.5" height="177"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </subviews>
@@ -45,7 +45,7 @@
                 <outlet property="otherNewsImageNews" destination="LNZ-jg-g4D" id="i4i-t3-tfW"/>
                 <outlet property="topicNameDateView" destination="Bz6-Eg-KPG" id="Rpd-Ho-j58"/>
             </connections>
-            <point key="canvasLocation" x="38.405797101449281" y="171.76339285714286"/>
+            <point key="canvasLocation" x="-327.536231884058" y="-153.01339285714286"/>
         </tableViewCell>
     </objects>
     <resources>

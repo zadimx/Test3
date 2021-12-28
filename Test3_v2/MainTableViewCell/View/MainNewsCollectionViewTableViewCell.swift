@@ -25,7 +25,7 @@ class MainNewsCollectionViewTableViewCell: UITableViewCell, UICollectionViewData
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainNewsCollectionViewCell.identifier, for: indexPath) as! MainNewsCollectionViewCell
-        cell.setData(with: mainNewsPresenter.arrayArticles[indexPath.row])
+        HardCode().setupData(object: mainNewsPresenter.arrayArticles[indexPath.row], imageView: cell.mainNewsImageView, view: cell.content)
         return cell
     }
 

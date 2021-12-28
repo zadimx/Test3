@@ -43,7 +43,7 @@ class OtherNewsTableViewPresenter: OtherNewsTableViewPresenterProtocol {
     }
 
     func getArticles() {
-        let urlString = HardCode.urlApiNewsString(pageNews: pageNews, urlKey: HardCode.lastUrlKeyString, pieceUrlNew: endpoint)
+        let urlString = HardCode.urlApiNewsString(pageNews: pageNews, urlKey: HardCode.firstUrlKeyString, pieceUrlNew: endpoint)
         pageNews += 1
         self.networkService.getArticles(urlString: urlString) { [weak self] result in
             guard let self = self else {

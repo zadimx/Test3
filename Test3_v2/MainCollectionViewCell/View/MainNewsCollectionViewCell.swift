@@ -8,11 +8,10 @@
 import UIKit
 
 class MainNewsCollectionViewCell: UICollectionViewCell {
-    @IBOutlet var mainNewsDateLabel: UILabel!
-    @IBOutlet var mainNewsHistoryLabel: UILabel!
-    @IBOutlet var mainNewsTopicTextView: UITextView!
-    @IBOutlet var mainNewsImageView: UIImageView!
-    @IBOutlet weak var mainNewsContentView: UIView!
+  var content: ContentView!
+  @IBOutlet weak var topicNameDateView: UIView!
+  @IBOutlet var mainNewsImageView: UIImageView!
+    @IBOutlet weak var view: UIView!
     static let identifier = "MyCollectionViewCell"
 
     static func nib() -> UINib {
@@ -21,20 +20,12 @@ class MainNewsCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        mainNewsContentView.layer.cornerRadius = 20
-        initialImageView(imageView: mainNewsImageView)
-    }
-
-    public func setData(with mainObject: Article) {
-        mainNewsDateLabel.text = HardCode().dateFormat(dateString: mainObject.publishedAt)
-        mainNewsHistoryLabel.text = mainObject.source?.name
-        mainNewsTopicTextView.text = mainObject.title
-        HardCode().setupUrlImage(data: mainObject, imageView: mainNewsImageView)
-    }
-}
-
-extension MainNewsCollectionViewCell {
-    func initialImageView(imageView: UIImageView) {
-        imageView.layer.cornerRadius = 20
+        content = (ContentView.loadViewFromNib() as! ContentView)
+      
+        
+        view.layer.cornerRadius = 20
+        
+        HardCode().layoutAttachAll(contentView: content, view: topicNameDateView)
+        HardCode().initialLayerImageView(imageView: mainNewsImageView)
     }
 }

@@ -14,38 +14,12 @@ class OtherNewsTableViewCell: UITableViewCell {
   @IBOutlet var topicNameDateView: UIView!
   override func awakeFromNib() {
         super.awakeFromNib()
+    content = (ContentView.loadViewFromNib() as! ContentView)
+    let topicLabel = UIFont.preferredFont(forTextStyle: .callout)
+    content.topicLabel.font = topicLabel
+    HardCode().layoutAttachAll(contentView: content, view: topicNameDateView)
     
-    
-        content = ContentView(frame: topicNameDateView.frame)
-    
-    topicNameDateView.addSubview(content)
-    var constraints = [NSLayoutConstraint]()
-    
-    content.translatesAutoresizingMaskIntoConstraints = false
-    constraints.append(topicNameDateView.leadingAnchor.constraint(equalTo: content.safeAreaLayoutGuide.leadingAnchor))
-    constraints.append(topicNameDateView.trailingAnchor.constraint(equalTo: content.safeAreaLayoutGuide.trailingAnchor))
-    constraints.append(topicNameDateView.bottomAnchor.constraint(equalTo: content.safeAreaLayoutGuide.bottomAnchor))
-    constraints.append(topicNameDateView.topAnchor.constraint(equalTo: content.safeAreaLayoutGuide.topAnchor))
-    NSLayoutConstraint.activate(constraints)
-        
-        initialImageView(imageView: otherNewsImageNews)
+    HardCode().initialLayerImageView(imageView: otherNewsImageNews)
     }
   
-  
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-
-    func setData(object: Article) {
-        HardCode().setupUrlImage(data: object, imageView: otherNewsImageNews)
-        content.setupData(data: object)
-    }
-}
-
-extension OtherNewsTableViewCell {
-    func initialImageView(imageView: UIImageView) {
-        imageView.layer.cornerRadius = 20
-    }
-  
-
 }
