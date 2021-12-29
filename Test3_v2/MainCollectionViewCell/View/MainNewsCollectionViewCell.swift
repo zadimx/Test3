@@ -21,8 +21,15 @@ class MainNewsCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         topicNameDateContentView = (ContentView.loadViewFromNib() as! ContentView)
+
+        RepetitiveCode().layoutAttachAll(contentView: topicNameDateContentView, view: emptyView)
+        initialLayerImageView(imageView: imageView, view: view)
+    }
+}
+
+extension MainNewsCollectionViewCell {
+    func initialLayerImageView(imageView: UIImageView, view: UIView) {
+        imageView.layer.cornerRadius = 20
         view.layer.cornerRadius = 20
-        HardCode().layoutAttachAll(contentView: topicNameDateContentView, view: emptyView)
-        HardCode().initialLayerImageView(imageView: imageView)
     }
 }

@@ -23,6 +23,4 @@ class ContentView: UIView {
         let nib = UINib(nibName: "ContentView", bundle: bundle)
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
-
-
 }

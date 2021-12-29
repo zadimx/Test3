@@ -8,7 +8,8 @@
 import UIKit
 
 class OtherNewsTableViewCell: UITableViewCell {
-    @IBOutlet weak var otherNewsImageNews: UIImageView!
+
+    @IBOutlet weak var pictureNewsImageView: UIImageView!
     var topicNameDateContentView: ContentView!
     @IBOutlet var emptyView: UIView!
 
@@ -17,8 +18,13 @@ class OtherNewsTableViewCell: UITableViewCell {
         topicNameDateContentView = (ContentView.loadViewFromNib() as! ContentView)
         let topicLabel = UIFont.preferredFont(forTextStyle: .callout)
         topicNameDateContentView.topicLabel.font = topicLabel
-        HardCode().layoutAttachAll(contentView: topicNameDateContentView, view: emptyView)
-        HardCode().initialLayerImageView(imageView: otherNewsImageNews)
+        RepetitiveCode().layoutAttachAll(contentView: topicNameDateContentView, view: emptyView)
+        initialLayerImageView(imageView: pictureNewsImageView)
     }
+}
 
+extension OtherNewsTableViewCell {
+    func initialLayerImageView(imageView: UIImageView) {
+        imageView.layer.cornerRadius = 20
+    }
 }

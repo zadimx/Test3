@@ -34,6 +34,7 @@
 		1DBA6465273D6F130028CB3F /* OtherNewsTableViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA6464273D6F130028CB3F /* OtherNewsTableViewPresenter.swift */; };
 		1DBA646A273D6F210028CB3F /* AssemblyModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA6469273D6F210028CB3F /* AssemblyModelBuilder.swift */; };
 		50AB79A7274A7F43000A5AB9 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AB79A6274A7F43000A5AB9 /* Router.swift */; };
+		F56299B91E9DFBB41D139E9E /* RepetitiveCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F562950A472101B7C9895A7A /* RepetitiveCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		1DBA6464273D6F130028CB3F /* OtherNewsTableViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OtherNewsTableViewPresenter.swift; path = Test3_v2/MainNewsTableView/Presenter/OtherNewsTableViewPresenter.swift; sourceTree = SOURCE_ROOT; };
 		1DBA6469273D6F210028CB3F /* AssemblyModelBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AssemblyModelBuilder.swift; path = Test3_v2/AssemblyModelBuilder.swift; sourceTree = SOURCE_ROOT; };
 		50AB79A6274A7F43000A5AB9 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		F562950A472101B7C9895A7A /* RepetitiveCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepetitiveCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +241,7 @@
 				1D8817A4273AAB71003936B2 /* LaunchScreen.storyboard */,
 				1D8817A7273AAB71003936B2 /* Info.plist */,
 				1D9F0E182774A6C20006FAD2 /* ViewController.swift */,
+				F562950A472101B7C9895A7A /* RepetitiveCode.swift */,
 			);
 			path = Test3_v2;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				1D3702462743CB280029FEFB /* MainNewsCollectionViewCell.swift in Sources */,
 				1D9F0E192774A6C20006FAD2 /* ViewController.swift in Sources */,
 				1D3702332743C5F40029FEFB /* MainNewsCollectionViewTableViewCellPresenter.swift in Sources */,
+				F56299B91E9DFBB41D139E9E /* RepetitiveCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

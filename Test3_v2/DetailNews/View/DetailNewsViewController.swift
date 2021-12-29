@@ -20,16 +20,15 @@ class DetailNewsViewController: UIViewController {
         topicNameDateContentView = (ContentView.loadViewFromNib() as! ContentView)
         presenter.setupData()
         initialImageView(imageView: imageView, view: contentView)
-        HardCode().layoutAttachAll(contentView: topicNameDateContentView, view: emptyView)
+        RepetitiveCode().layoutAttachAll(contentView: topicNameDateContentView, view: emptyView)
     }
 }
 
 extension DetailNewsViewController: DetailNewsProtocol {
     func setupData(data: Article) {
-        HardCode().setupData(object: data, imageView: imageView, view: topicNameDateContentView)
+        RepetitiveCode().setupData(object: data, imageView: imageView, view: topicNameDateContentView)
         descriptionTextView.text = data.content
     }
-
 }
 
 extension DetailNewsViewController {

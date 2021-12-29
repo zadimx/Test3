@@ -40,7 +40,7 @@ extension OtherNewsTableViewViewController: UITableViewDataSource {
         } else {
             tableView.rowHeight = HardCode.rowHeightTableView
             let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as? OtherNewsTableViewCell
-            HardCode().setupData(object: otherNewsPresenter.arrayArticles[indexPath.row], imageView: cell!.otherNewsImageNews, view: cell!.topicNameDateContentView)
+            RepetitiveCode().setupData(object: otherNewsPresenter.arrayArticles[indexPath.row], imageView: cell!.pictureNewsImageView, view: cell!.topicNameDateContentView)
             return cell!
         }
     }
