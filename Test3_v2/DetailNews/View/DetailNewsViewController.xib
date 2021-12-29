@@ -11,11 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailNewsViewController" customModule="Test3_v2" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="pgZ-7l-8rU" id="N4o-hW-zbR"/>
-                <outlet property="dateLabel" destination="1gx-WM-kVr" id="fRF-67-WHU"/>
                 <outlet property="descriptionTextView" destination="AjB-aZ-VTO" id="ddV-PD-4Qj"/>
-                <outlet property="historyLabel" destination="nsi-b2-Ogd" id="A0S-gO-Wxh"/>
+                <outlet property="emptyView" destination="bjq-tn-5DX" id="x2d-xM-Mug"/>
                 <outlet property="imageView" destination="x7u-Jg-EPd" id="vKV-8Z-zY5"/>
-                <outlet property="topicTextView" destination="OuK-I2-NEn" id="O9v-Vc-3jn"/>
                 <outlet property="view" destination="p4P-tb-V7B" id="DrG-Ao-qjf"/>
             </connections>
         </placeholder>
@@ -30,51 +28,28 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pgZ-7l-8rU">
                     <rect key="frame" x="0.0" y="290" width="414" height="572"/>
                     <subviews>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuK-I2-NEn">
-                            <rect key="frame" x="16" y="16" width="382" height="128"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjq-tn-5DX">
+                            <rect key="frame" x="16" y="16" width="382" height="148"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, dfgdfgdfgdfgdfgdfgdfgdgdfgdfgdgdfgdfgdfgdfgdfgdfgdfgdfgdfgd</string>
-                            <color key="textColor" systemColor="labelColor"/>
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                        </textView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AjB-aZ-VTO">
-                            <rect key="frame" x="16" y="180" width="382" height="394"/>
+                        </view>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" id="AjB-aZ-VTO">
+                            <rect key="frame" x="16" y="180" width="382" height="384"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.  Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate </string>
                             <color key="textColor" systemColor="systemGrayColor"/>
                             <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
-                        <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="R16-Ej-Jm0">
-                            <rect key="frame" x="20" y="146" width="374" height="19.5"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labefgthfrthl" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="41.5" translatesAutoresizingMaskIntoConstraints="NO" id="nsi-b2-Ogd">
-                                    <rect key="frame" x="0.0" y="0.0" width="187" height="19.5"/>
-                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fghfghfhfhfh" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gx-WM-kVr">
-                                    <rect key="frame" x="187" y="0.0" width="187" height="19.5"/>
-                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                    <color key="textColor" systemColor="systemGrayColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                        </stackView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="AjB-aZ-VTO" firstAttribute="leading" secondItem="pgZ-7l-8rU" secondAttribute="leading" constant="16" id="1PN-EJ-fJ6"/>
                         <constraint firstAttribute="trailing" secondItem="AjB-aZ-VTO" secondAttribute="trailing" constant="16" id="8DQ-Af-Tlk"/>
-                        <constraint firstItem="R16-Ej-Jm0" firstAttribute="leading" secondItem="pgZ-7l-8rU" secondAttribute="leading" constant="20" id="BdY-ru-bg7"/>
-                        <constraint firstAttribute="trailing" secondItem="R16-Ej-Jm0" secondAttribute="trailing" constant="20" id="CUL-gV-RVh"/>
-                        <constraint firstItem="AjB-aZ-VTO" firstAttribute="top" secondItem="R16-Ej-Jm0" secondAttribute="bottom" constant="14.5" id="Vu2-bB-b7d"/>
-                        <constraint firstItem="OuK-I2-NEn" firstAttribute="top" secondItem="pgZ-7l-8rU" secondAttribute="top" constant="16" id="c9h-ct-YYC"/>
-                        <constraint firstAttribute="trailing" secondItem="OuK-I2-NEn" secondAttribute="trailing" constant="16" id="n9N-go-qmP"/>
-                        <constraint firstItem="OuK-I2-NEn" firstAttribute="leading" secondItem="pgZ-7l-8rU" secondAttribute="leading" constant="16" id="tMY-or-Z3D"/>
-                        <constraint firstItem="R16-Ej-Jm0" firstAttribute="top" secondItem="OuK-I2-NEn" secondAttribute="bottom" constant="2" id="veC-BQ-fTA"/>
+                        <constraint firstItem="bjq-tn-5DX" firstAttribute="top" secondItem="pgZ-7l-8rU" secondAttribute="top" constant="16" id="KiX-yy-CBH"/>
+                        <constraint firstItem="bjq-tn-5DX" firstAttribute="leading" secondItem="pgZ-7l-8rU" secondAttribute="leading" constant="16" id="MrH-q0-iwr"/>
+                        <constraint firstItem="AjB-aZ-VTO" firstAttribute="top" secondItem="bjq-tn-5DX" secondAttribute="bottom" constant="16" id="gYa-TK-vRC"/>
+                        <constraint firstAttribute="trailing" secondItem="bjq-tn-5DX" secondAttribute="trailing" constant="16" id="pWa-KY-isl"/>
                     </constraints>
                 </view>
             </subviews>
@@ -94,9 +69,6 @@
         </view>
     </objects>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

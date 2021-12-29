@@ -9,11 +9,12 @@
 import Foundation
 
 protocol NetworkServiceProtocol {
-    func getArticles(urlString: String, completion: @escaping (Result<[Article], Error>) -> Void)
+    func getArticles(pageNews: Int, urlKey: String, endpoint: String, completion: @escaping (Result<[Article], Error>) -> Void)
 }
 
 class NetworkService: NetworkServiceProtocol {
-    func getArticles(urlString: String, completion: @escaping (Result<[Article], Error>) -> Void) {
+    func getArticles(pageNews: Int, urlKey: String, endpoint: String, completion: @escaping (Result<[Article], Error>) -> Void) {
+        let urlString = HardCode.urlApiNewsString(pageNews: pageNews, urlKey: HardCode.firstUrlKeyString, pieceUrlNew: endpoint)
         guard let url = URL(string: urlString) else {
             return
         }

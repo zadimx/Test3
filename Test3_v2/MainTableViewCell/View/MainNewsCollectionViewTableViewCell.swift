@@ -25,7 +25,7 @@ class MainNewsCollectionViewTableViewCell: UITableViewCell, UICollectionViewData
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainNewsCollectionViewCell.identifier, for: indexPath) as! MainNewsCollectionViewCell
-        HardCode().setupData(object: mainNewsPresenter.arrayArticles[indexPath.row], imageView: cell.mainNewsImageView, view: cell.content)
+        HardCode().setupData(object: mainNewsPresenter.arrayArticles[indexPath.row], imageView: cell.imageView, view: cell.topicNameDateContentView)
         return cell
     }
 
@@ -37,7 +37,7 @@ class MainNewsCollectionViewTableViewCell: UITableViewCell, UICollectionViewData
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let data = mainNewsPresenter.arrayArticles[indexPath.row]
-        mainNewsPresenter.tabOnTheArticles(articles: data)
+        mainNewsPresenter.tabOnTheArticles(article: data)
     }
 }
 

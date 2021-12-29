@@ -40,14 +40,14 @@ extension OtherNewsTableViewViewController: UITableViewDataSource {
         } else {
             tableView.rowHeight = HardCode.rowHeightTableView
             let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as? OtherNewsTableViewCell
-            HardCode().setupData(object: otherNewsPresenter.arrayArticles[indexPath.row], imageView: cell!.otherNewsImageNews, view: cell!.content)
+            HardCode().setupData(object: otherNewsPresenter.arrayArticles[indexPath.row], imageView: cell!.otherNewsImageNews, view: cell!.topicNameDateContentView)
             return cell!
         }
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let data = otherNewsPresenter.arrayArticles[indexPath.row]
-        otherNewsPresenter.tabOnTheArticles(articles: data)
+        otherNewsPresenter.tabOnTheArticles(article: data)
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

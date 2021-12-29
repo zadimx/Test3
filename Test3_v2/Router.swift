@@ -15,7 +15,7 @@ protocol RouterMain {
 
 protocol RouterProtocol: RouterMain {
     func initialViewController()
-    func showDetail(articles: Article)
+    func showDetail(article: Article)
     func popToRoot()
 }
 
@@ -37,9 +37,9 @@ class Router: RouterProtocol {
         }
     }
 
-    func showDetail(articles: Article) {
+    func showDetail(article: Article) {
         if let navigationController = navigationController {
-            guard let detailViewController = assemblyBuilder?.createDetailNewsModuleViewController(data: articles, router: self) else {
+            guard let detailViewController = assemblyBuilder?.createDetailNewsModuleViewController(data: article, router: self) else {
                 return
             }
             navigationController.pushViewController(detailViewController, animated: true)

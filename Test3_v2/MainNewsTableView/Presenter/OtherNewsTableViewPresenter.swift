@@ -19,7 +19,7 @@ protocol OtherNewsTableViewPresenterProtocol: class {
 
     init(view: OtherNewsTableViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol, endpoint: String)
     func getArticles()
-    func tabOnTheArticles(articles: Article)
+    func tabOnTheArticles(article: Article)
 }
 
 class OtherNewsTableViewPresenter: OtherNewsTableViewPresenterProtocol {
@@ -38,14 +38,13 @@ class OtherNewsTableViewPresenter: OtherNewsTableViewPresenterProtocol {
         getArticles()
     }
 
-    func tabOnTheArticles(articles: Article) {
-        router.showDetail(articles: articles)
+    func tabOnTheArticles(article: Article) {
+        router.showDetail(article: article)
     }
 
     func getArticles() {
-        let urlString = HardCode.urlApiNewsString(pageNews: pageNews, urlKey: HardCode.firstUrlKeyString, pieceUrlNew: endpoint)
         pageNews += 1
-        self.networkService.getArticles(urlString: urlString) { [weak self] result in
+        self.networkService.getArticles(pageNews: pageNews, urlKey: HardCode.firstUrlKeyString, endpoint: endpoint) { [weak self] result in
             guard let self = self else {
                 return
             }

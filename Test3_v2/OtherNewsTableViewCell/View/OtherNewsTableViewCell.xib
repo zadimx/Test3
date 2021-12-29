@@ -42,8 +42,8 @@
                 <constraint firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottom" id="t3d-CD-BXs"/>
             </constraints>
             <connections>
+                <outlet property="emptyView" destination="Bz6-Eg-KPG" id="Rpd-Ho-j58"/>
                 <outlet property="otherNewsImageNews" destination="LNZ-jg-g4D" id="i4i-t3-tfW"/>
-                <outlet property="topicNameDateView" destination="Bz6-Eg-KPG" id="Rpd-Ho-j58"/>
             </connections>
             <point key="canvasLocation" x="-327.536231884058" y="-153.01339285714286"/>
         </tableViewCell>

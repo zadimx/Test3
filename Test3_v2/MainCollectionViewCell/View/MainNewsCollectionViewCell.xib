@@ -62,8 +62,8 @@
             </constraints>
             <size key="customSize" width="450" height="566"/>
             <connections>
-                <outlet property="mainNewsImageView" destination="lZg-MJ-0Fz" id="1dA-ae-lXT"/>
-                <outlet property="topicNameDateView" destination="4XS-Dv-IVd" id="bcD-HF-HOr"/>
+                <outlet property="emptyView" destination="4XS-Dv-IVd" id="bcD-HF-HOr"/>
+                <outlet property="imageView" destination="lZg-MJ-0Fz" id="1dA-ae-lXT"/>
                 <outlet property="view" destination="1tE-mx-aAD" id="DaC-m0-Shp"/>
             </connections>
             <point key="canvasLocation" x="-106.92307692307692" y="157.81990521327015"/>

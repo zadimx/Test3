@@ -8,9 +8,9 @@
 import UIKit
 
 class MainNewsCollectionViewCell: UICollectionViewCell {
-  var content: ContentView!
-  @IBOutlet weak var topicNameDateView: UIView!
-  @IBOutlet var mainNewsImageView: UIImageView!
+    var topicNameDateContentView: ContentView!
+    @IBOutlet weak var emptyView: UIView!
+    @IBOutlet var imageView: UIImageView!
     @IBOutlet weak var view: UIView!
     static let identifier = "MyCollectionViewCell"
 
@@ -20,12 +20,9 @@ class MainNewsCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        content = (ContentView.loadViewFromNib() as! ContentView)
-      
-        
+        topicNameDateContentView = (ContentView.loadViewFromNib() as! ContentView)
         view.layer.cornerRadius = 20
-        
-        HardCode().layoutAttachAll(contentView: content, view: topicNameDateView)
-        HardCode().initialLayerImageView(imageView: mainNewsImageView)
+        HardCode().layoutAttachAll(contentView: topicNameDateContentView, view: emptyView)
+        HardCode().initialLayerImageView(imageView: imageView)
     }
 }

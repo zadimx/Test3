@@ -9,17 +9,16 @@ import UIKit
 
 class OtherNewsTableViewCell: UITableViewCell {
     @IBOutlet weak var otherNewsImageNews: UIImageView!
+    var topicNameDateContentView: ContentView!
+    @IBOutlet var emptyView: UIView!
 
-  var content: ContentView!
-  @IBOutlet var topicNameDateView: UIView!
-  override func awakeFromNib() {
+    override func awakeFromNib() {
         super.awakeFromNib()
-    content = (ContentView.loadViewFromNib() as! ContentView)
-    let topicLabel = UIFont.preferredFont(forTextStyle: .callout)
-    content.topicLabel.font = topicLabel
-    HardCode().layoutAttachAll(contentView: content, view: topicNameDateView)
-    
-    HardCode().initialLayerImageView(imageView: otherNewsImageNews)
+        topicNameDateContentView = (ContentView.loadViewFromNib() as! ContentView)
+        let topicLabel = UIFont.preferredFont(forTextStyle: .callout)
+        topicNameDateContentView.topicLabel.font = topicLabel
+        HardCode().layoutAttachAll(contentView: topicNameDateContentView, view: emptyView)
+        HardCode().initialLayerImageView(imageView: otherNewsImageNews)
     }
-  
+
 }
