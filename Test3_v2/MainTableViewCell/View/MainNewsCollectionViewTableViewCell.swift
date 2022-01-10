@@ -31,7 +31,7 @@ class MainNewsCollectionViewTableViewCell: UITableViewCell, UICollectionViewData
 
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if (indexPath.row == (mainNewsPresenter.arrayArticles.count - 1)) {
-            mainNewsPresenter.getArticles()
+            mainNewsPresenter.loadMoreArticleForView()
         }
     }
 
@@ -50,7 +50,7 @@ extension MainNewsCollectionViewTableViewCell: UICollectionViewDelegate {
 }
 
 extension MainNewsCollectionViewTableViewCell: OtherNewsTableViewProtocol {
-    func success() {
+    func dataLoadedSuccessfully() {
         collectionView.reloadData()
     }
 

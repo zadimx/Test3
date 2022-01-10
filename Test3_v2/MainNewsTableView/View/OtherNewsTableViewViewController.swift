@@ -55,13 +55,13 @@ extension OtherNewsTableViewViewController: UITableViewDataSource {
         let contentHeight = scrollView.contentSize.height
         if (offsetY > contentHeight - scrollView.frame.size.height && !flagSendRequest) {
             flagSendRequest = true
-            otherNewsPresenter.getArticles()
+            otherNewsPresenter.loadMoreArticleForView()
         }
     }
 }
 
 extension OtherNewsTableViewViewController: OtherNewsTableViewProtocol {
-    func success() {
+    func dataLoadedSuccessfully() {
         tableView.reloadData()
         flagSendRequest = false
     }
